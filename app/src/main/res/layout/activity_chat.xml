@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:context=".Chat"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.rockerhieu.emojicon.EmojiconTextView
+        android:id="@+id/txtEmojicon"
+        android:text="\ue32d"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal">
+    <com.rockerhieu.emojicon.EmojiconEditText
+        android:id="@+id/editEmojicon"
+        android:text="\ue32d"
+        emojicon:emojiconSize="28sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/emoti_toggle"
+        android:layout_width="40sp"
+        android:scaleType="fitXY"
+        android:layout_height="40sp"
+        android:src="@mipmap/ic_emoticon_grey600_36dp"/>
+</LinearLayout>
+    <fragment
+        android:id="@+id/emojicons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        class="com.rockerhieu.emojicon.EmojiconsFragment"
+        tools:layout="@layout/emojicon_grid" />
+</LinearLayout>
